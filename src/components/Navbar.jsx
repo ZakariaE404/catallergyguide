@@ -32,28 +32,28 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium text-charcoal">
             <div className="relative group flex items-center gap-1 cursor-pointer hover:text-sage transition-colors py-2">
-              <Link href="#">Breeds</Link>
+              <Link href="/hypoallergenic-breeds">Breeds</Link>
               <svg className="w-4 h-4 text-charcoal/60 group-hover:text-sage transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
             </div>
 
-            <Link href="#" className="hover:text-sage transition-colors py-2">
+            <Link href="/understanding-allergies" className="hover:text-sage transition-colors py-2">
               Allergy Guide
             </Link>
 
-            <Link href="#" className="hover:text-sage transition-colors py-2">
+            <Link href="/best-products" className="hover:text-sage transition-colors py-2">
               Product Reviews
             </Link>
 
             <div className="relative group flex items-center gap-1 cursor-pointer hover:text-sage transition-colors py-2">
-              <Link href="#">Tools</Link>
+              <Link href="/tools/breed-matcher">Tools</Link>
               <svg className="w-4 h-4 text-charcoal/60 group-hover:text-sage transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
             </div>
 
-            <Link href="#" className="hover:text-sage transition-colors py-2">
+            <Link href="/managing-allergies-at-home" className="hover:text-sage transition-colors py-2">
               Blog
             </Link>
           </nav>
@@ -61,7 +61,7 @@ export default function Navbar() {
           {/* Allergy Quiz CTA Button */}
           <div className="hidden md:flex items-center">
             <Link
-              href="#"
+              href="/tools/allergy-quiz"
               className="bg-terracotta hover:bg-terracotta/90 text-white text-sm font-semibold px-6 py-2.5 rounded-full shadow-sm hover:shadow transition-all duration-200"
             >
               Allergy Quiz
@@ -90,24 +90,24 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-cream border-t border-sage/10 px-4 pt-4 pb-6 space-y-3">
-          <Link href="#" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
+          <Link href="/hypoallergenic-breeds" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
             Breeds
           </Link>
-          <Link href="#" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
+          <Link href="/understanding-allergies" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
             Allergy Guide
           </Link>
-          <Link href="#" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
+          <Link href="/best-products" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
             Product Reviews
           </Link>
-          <Link href="#" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
+          <Link href="/tools/breed-matcher" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
             Tools
           </Link>
-          <Link href="#" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
+          <Link href="/managing-allergies-at-home" className="block py-2 text-base font-medium text-charcoal hover:text-sage">
             Blog
           </Link>
           <div className="pt-2">
             <Link
-              href="#"
+              href="/tools/allergy-quiz"
               className="block w-full text-center bg-terracotta text-white font-semibold px-5 py-3 rounded-full shadow"
             >
               Allergy Quiz

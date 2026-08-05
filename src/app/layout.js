@@ -12,8 +12,38 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "CatAllergyGuide — Love Cats. Breathe Easy. Live Better.",
+  metadataBase: new URL('https://catallergyguide.com'),
+  title: {
+    default: "CatAllergyGuide — Love Cats. Breathe Easy. Live Better.",
+    template: "%s | CatAllergyGuide",
+  },
   description: "Expert guidance, trusted resources, and hypoallergenic cat breeds for allergy-sensitive homes.",
+  openGraph: {
+    title: "CatAllergyGuide — Love Cats. Breathe Easy. Live Better.",
+    description: "Expert guidance, trusted resources, and hypoallergenic cat breeds for allergy-sensitive homes.",
+    url: 'https://catallergyguide.com',
+    siteName: 'CatAllergyGuide',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/images/hero-cat.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'CatAllergyGuide — Hypoallergenic Cat Guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "CatAllergyGuide — Love Cats. Breathe Easy. Live Better.",
+    description: "Expert guidance, trusted resources, and hypoallergenic cat breeds for allergy-sensitive homes.",
+    images: ['/images/hero-cat.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {

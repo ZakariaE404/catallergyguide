@@ -24,7 +24,6 @@ export default function ToolsSection() {
           {/* Tool 1: Allergy Severity Quiz */}
           <div className="bg-beige rounded-2xl p-6 sm:p-8 flex items-start gap-6 border border-charcoal/10 shadow-xs hover:shadow-md transition-all duration-300">
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-cream flex-shrink-0 flex items-center justify-center p-3 text-sage border border-sage/20">
-              {/* Clipboard Checklist Icon matching mockup */}
               <svg className="w-10 h-10 stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
@@ -39,7 +38,7 @@ export default function ToolsSection() {
               </p>
               <div>
                 <Link
-                  href="#"
+                  href="/tools/allergy-quiz"
                   className="inline-block bg-terracotta hover:bg-terracotta/90 text-white text-sm font-semibold px-6 py-2 rounded-full shadow-xs transition-colors"
                 >
                   Try It Now
@@ -51,7 +50,6 @@ export default function ToolsSection() {
           {/* Tool 2: Breed Matcher Tool */}
           <div className="bg-beige rounded-2xl p-6 sm:p-8 flex items-start gap-6 border border-charcoal/10 shadow-xs hover:shadow-md transition-all duration-300">
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-cream flex-shrink-0 flex items-center justify-center p-3 text-sage border border-sage/20">
-              {/* Magnifying glass with paw print matching mockup */}
               <svg className="w-10 h-10 stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 <circle cx="10" cy="10" r="1.5" fill="currentColor" />
@@ -67,7 +65,7 @@ export default function ToolsSection() {
               </p>
               <div>
                 <Link
-                  href="#"
+                  href="/tools/breed-matcher"
                   className="inline-block bg-terracotta hover:bg-terracotta/90 text-white text-sm font-semibold px-6 py-2 rounded-full shadow-xs transition-colors"
                 >
                   Try It Now

@@ -1,85 +1,18 @@
-import Image from 'next/image';
 import Link from 'next/link';
-
-const posts = [
-  {
-    category: 'BREED GUIDE',
-    title: '5 Hypoallergenic Cat Breeds That May Be Right for You',
-    excerpt: 'These cats produce fewer allergens and may be a better fit for sensitive homes.',
-    date: 'May 20, 2024',
-    image: '/images/blog-1.jpg',
-    href: '#',
-  },
-  {
-    category: 'ALLERGY GUIDE',
-    title: 'Understanding Cat Allergies: The Complete Guide',
-    excerpt: 'Learn the causes, symptoms, and steps to create a more comfortable home.',
-    date: 'May 18, 2024',
-    image: '/images/blog-2.jpg',
-    href: '#',
-  },
-  {
-    category: 'PRODUCT REVIEW',
-    title: 'The Best Cat Products for Allergy-Sensitive Homes',
-    excerpt: 'Our top picks for air purifiers, litter, grooming tools, and more.',
-    date: 'May 15, 2024',
-    image: '/images/blog-3.jpg',
-    href: '#',
-  },
-];
+import PostCard from '@/components/PostCard';
+import { getAllPosts } from '@/lib/mdx';
 
 export default function BlogPreviewGrid() {
+  const posts = getAllPosts().slice(0, 3);
+
   return (
     <section className="py-12 md:py-16 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 3 Blog Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts.map((post, idx) => (
-            <article
-              key={idx}
-              className="bg-beige rounded-2xl overflow-hidden border border-charcoal/5 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col group"
-            >
-              {/* Image Container */}
-              <div className="relative w-full h-56 overflow-hidden">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-
-              {/* Card Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-3">
-                  {/* Category Pill Tag */}
-                  <div>
-                    <span className="inline-block bg-terracotta text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-md">
-                      {post.category}
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="font-sans font-bold text-lg text-charcoal group-hover:text-sage transition-colors leading-snug">
-                    <Link href={post.href}>
-                      {post.title}
-                    </Link>
-                  </h3>
-
-                  {/* Excerpt */}
-                  <p className="text-charcoal/75 text-sm leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                </div>
-
-                {/* Published Date */}
-                <div className="pt-1 text-xs font-medium text-charcoal/60">
-                  {post.date}
-                </div>
-              </div>
-            </article>
+          {posts.map((post) => (
+            <PostCard key={post.slug} post={post} />
           ))}
         </div>
 
