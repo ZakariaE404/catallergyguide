@@ -72,6 +72,7 @@ export default function Footer() {
               <li><Link href="/best-products" className="hover:text-cream hover:underline transition-colors">Product Reviews</Link></li>
               <li><Link href="/tools/allergy-quiz" className="hover:text-cream hover:underline transition-colors">Tools</Link></li>
               <li><Link href="/managing-allergies-at-home" className="hover:text-cream hover:underline transition-colors">Blog</Link></li>
+              <li><Link href="/blog" className="hover:text-cream hover:underline transition-colors">All Posts</Link></li>
             </ul>
           </div>
 
