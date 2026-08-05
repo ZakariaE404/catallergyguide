@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#EFE7DB"/>
+  <circle cx="400" cy="300" r="180" fill="#4A6B5A" opacity="0.15"/>
+  <!-- Cat Silhouette -->
+  <g fill="#4A6B5A">
+    <path d="M 400 210 Q 420 160 460 170 Q 450 220 440 240 Q 490 270 500 340 Q 510 420 400 440 Q 290 420 300 340 Q 310 270 360 240 Q 350 220 340 170 Q 380 160 400 210 Z"/>
+    <circle cx="360" cy="310" r="12" fill="#FAF7F2"/>
+    <circle cx="440" cy="310" r="12" fill="#FAF7F2"/>
+    <circle cx="360" cy="310" r="6" fill="#2E2E2E"/>
+    <circle cx="440" cy="310" r="6" fill="#2E2E2E"/>
+    <polygon points="400,335 390,325 410,325" fill="#D97B4F"/>
+  </g>
+  <text x="400" y="520" font-family="sans-serif" font-size="22" font-weight="bold" fill="#4A6B5A" text-anchor="middle">Hypoallergenic Cat Placeholder</text>
+</svg>
