@@ -38,10 +38,10 @@ export default function BlogPreviewGrid() {
           {posts.map((post, idx) => (
             <article
               key={idx}
-              className="bg-beige rounded-2xl overflow-hidden border border-charcoal/5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group"
+              className="bg-beige rounded-2xl overflow-hidden border border-charcoal/5 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col group"
             >
               {/* Image Container */}
-              <div className="relative w-full h-52 bg-sage/10 overflow-hidden">
+              <div className="relative w-full h-56 overflow-hidden">
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -49,11 +49,6 @@ export default function BlogPreviewGrid() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                
-                {/* Fallback pattern if image is missing */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-sage/30 to-beige -z-10 flex items-center justify-center p-4 text-charcoal/60 text-xs font-mono">
-                  {post.image}
-                </div>
               </div>
 
               {/* Card Body */}
@@ -61,13 +56,13 @@ export default function BlogPreviewGrid() {
                 <div className="space-y-3">
                   {/* Category Pill Tag */}
                   <div>
-                    <span className="inline-block bg-terracotta text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-sm">
+                    <span className="inline-block bg-terracotta text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-md">
                       {post.category}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-sans font-bold text-xl text-charcoal group-hover:text-sage transition-colors leading-snug">
+                  <h3 className="font-sans font-bold text-lg text-charcoal group-hover:text-sage transition-colors leading-snug">
                     <Link href={post.href}>
                       {post.title}
                     </Link>
@@ -80,7 +75,7 @@ export default function BlogPreviewGrid() {
                 </div>
 
                 {/* Published Date */}
-                <div className="pt-2 text-xs font-medium text-charcoal/50">
+                <div className="pt-1 text-xs font-medium text-charcoal/60">
                   {post.date}
                 </div>
               </div>
