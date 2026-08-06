@@ -47,12 +47,31 @@ const dropdownData = {
 };
 
 function DesktopDropdown({ data, isOpen, onOpen, onClose, onToggle, isTouchDevice, dropdownRef }) {
+  const timeoutRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    if (!isTouchDevice) {
+      onOpen();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isTouchDevice) {
+      timeoutRef.current = setTimeout(() => {
+        onClose();
+      }, 150);
+    }
+  };
+
   return (
     <div
       ref={dropdownRef}
       className="relative"
-      onMouseEnter={() => { if (!isTouchDevice) onOpen(); }}
-      onMouseLeave={() => { if (!isTouchDevice) onClose(); }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <button
         onClick={onToggle}
@@ -75,7 +94,7 @@ function DesktopDropdown({ data, isOpen, onOpen, onClose, onToggle, isTouchDevic
 
       {/* Dropdown Panel */}
       <div
-        className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-60 bg-cream rounded-xl border border-sage/15 shadow-lg shadow-charcoal/8 py-2 z-50 transition-all duration-[180ms] ease-out origin-top ${
+        className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-60 bg-cream rounded-xl border border-sage/15 shadow-lg shadow-charcoal/8 py-2 z-50 transition-all duration-[180ms] ease-out origin-top before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 ${
           isOpen
             ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
