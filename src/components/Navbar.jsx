@@ -14,7 +14,7 @@ const dropdownData = {
       { label: 'Russian Blue', href: '/breeds/russian-blue' },
       { label: 'Bengal Cats', href: '/breeds/bengal-cats' },
     ],
-    viewAll: { label: 'View All Breeds →', href: '/hypoallergenic-breeds' },
+    viewAll: { label: 'View All Breeds →', href: '/breeds' },
   },
   allergyGuide: {
     label: 'Allergy Guide',
@@ -24,7 +24,7 @@ const dropdownData = {
       { label: 'Cat Allergy Testing', href: '/allergy-guide/cat-allergy-testing' },
       { label: 'Allergies in Babies & Kids', href: '/allergy-guide/allergies-in-babies-and-kids' },
     ],
-    viewAll: { label: 'View All Guides →', href: '/understanding-allergies' },
+    viewAll: { label: 'View All Guides →', href: '/allergy-guide' },
   },
   productReviews: {
     label: 'Product Reviews',
@@ -34,7 +34,7 @@ const dropdownData = {
       { label: 'Best Allergy Medication', href: '/product-reviews/best-allergy-medication' },
       { label: 'Best Grooming Tools', href: '/product-reviews/best-grooming-tools' },
     ],
-    viewAll: { label: 'View All Reviews →', href: '/best-products' },
+    viewAll: { label: 'View All Reviews →', href: '/product-reviews' },
   },
   tools: {
     label: 'Tools',
@@ -42,7 +42,7 @@ const dropdownData = {
       { label: 'Allergy Severity Quiz', href: '/tools/allergy-quiz' },
       { label: 'Breed Matcher Tool', href: '/tools/breed-matcher' },
     ],
-    viewAll: null,
+    viewAll: { label: 'View All Tools →', href: '/tools' },
   },
 };
 

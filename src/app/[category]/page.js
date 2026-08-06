@@ -3,23 +3,26 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PostCard from '@/components/PostCard';
-import { CATEGORIES, getPostsByCategory } from '@/lib/mdx';
+import { getAllCategories, getCategoryInfo, getPostsByCategory } from '@/lib/mdx';
 
 export async function generateStaticParams() {
-  return Object.keys(CATEGORIES).map((slug) => ({
+  const categories = getAllCategories();
+  return categories.map((slug) => ({
     category: slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
   const { category: categorySlug } = await params;
-  const category = CATEGORIES[categorySlug];
+  const categories = getAllCategories();
 
-  if (!category) {
+  if (!categories.includes(categorySlug)) {
     return {
       title: 'Category Not Found — CatAllergyGuide',
     };
   }
+
+  const category = getCategoryInfo(categorySlug);
 
   return {
     title: `${category.name} — CatAllergyGuide`,
@@ -35,13 +38,15 @@ export async function generateMetadata({ params }) {
 
 export default async function CategoryPage({ params }) {
   const { category: categorySlug } = await params;
-  const category = CATEGORIES[categorySlug];
+  const categories = getAllCategories();
 
-  if (!category) {
+  if (!categories.includes(categorySlug)) {
     notFound();
   }
 
+  const category = getCategoryInfo(categorySlug);
   const posts = getPostsByCategory(categorySlug);
+
 
   return (
     <div className="min-h-screen flex flex-col bg-cream text-charcoal">

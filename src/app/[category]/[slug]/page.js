@@ -5,18 +5,19 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PostCard from '@/components/PostCard';
-import { getAllPosts, getPostBySlug, getRelatedPosts, CATEGORIES } from '@/lib/mdx';
+import { getAllPosts, getPostBySlug, getRelatedPosts, getCategoryInfo } from '@/lib/mdx';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
+    category: post.category,
     slug: post.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const { category, slug } = await params;
+  const post = getPostBySlug(category, slug);
 
   if (!post) {
     return {
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }) {
       type: 'article',
       publishedTime: post.date,
       authors: [post.author || 'CatAllergyGuide Team'],
-      url: `${siteUrl}/blog/${post.slug}`,
+      url: `${siteUrl}/${post.category}/${post.slug}`,
       images: [
         {
           url: imageUrl,
@@ -57,19 +58,15 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const { category, slug } = await params;
+  const post = getPostBySlug(category, slug);
 
   if (!post) {
     notFound();
   }
 
-  const categoryInfo = CATEGORIES[post.category] || {
-    name: post.categoryName || post.category,
-    slug: post.category,
-  };
-
-  const relatedPosts = getRelatedPosts(post.category, post.slug, 3);
+  const categoryInfo = getCategoryInfo(category);
+  const relatedPosts = getRelatedPosts(category, slug, 3);
 
   // Article JSON-LD Schema
   const jsonLd = {
@@ -94,7 +91,7 @@ export default async function BlogPostPage({ params }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://catallergyguide.com/blog/${post.slug}`,
+      '@id': `https://catallergyguide.com/${post.category}/${post.slug}`,
     },
   };
 

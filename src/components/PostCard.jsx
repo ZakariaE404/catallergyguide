@@ -20,14 +20,17 @@ export default function PostCard({ post }) {
         <div className="space-y-3">
           {/* Category Tag Pill */}
           <div>
-            <span className="inline-block bg-terracotta text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-md">
+            <Link
+              href={`/${post.category}`}
+              className="inline-block bg-terracotta text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-md hover:bg-terracotta/90 transition-colors"
+            >
               {post.categoryName || post.category?.replace(/-/g, ' ')}
-            </span>
+            </Link>
           </div>
 
           {/* Post Title */}
           <h3 className="font-sans font-bold text-lg sm:text-xl text-charcoal group-hover:text-sage transition-colors leading-snug">
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/${post.category}/${post.slug}`}>
               {post.title}
             </Link>
           </h3>

@@ -67,12 +67,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm text-cream/80 font-medium">
               <li><Link href="/" className="hover:text-cream hover:underline transition-colors">Home</Link></li>
-              <li><Link href="/hypoallergenic-breeds" className="hover:text-cream hover:underline transition-colors">Breeds</Link></li>
-              <li><Link href="/understanding-allergies" className="hover:text-cream hover:underline transition-colors">Allergy Guide</Link></li>
-              <li><Link href="/best-products" className="hover:text-cream hover:underline transition-colors">Product Reviews</Link></li>
-              <li><Link href="/tools/allergy-quiz" className="hover:text-cream hover:underline transition-colors">Tools</Link></li>
-              <li><Link href="/managing-allergies-at-home" className="hover:text-cream hover:underline transition-colors">Blog</Link></li>
-              <li><Link href="/blog" className="hover:text-cream hover:underline transition-colors">All Posts</Link></li>
+              <li><Link href="/breeds" className="hover:text-cream hover:underline transition-colors">Breeds</Link></li>
+              <li><Link href="/allergy-guide" className="hover:text-cream hover:underline transition-colors">Allergy Guide</Link></li>
+              <li><Link href="/product-reviews" className="hover:text-cream hover:underline transition-colors">Product Reviews</Link></li>
+              <li><Link href="/tools" className="hover:text-cream hover:underline transition-colors">Tools</Link></li>
             </ul>
           </div>
 

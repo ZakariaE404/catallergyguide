@@ -1,4 +1,4 @@
-import { getAllPosts, CATEGORIES } from '@/lib/mdx';
+import { getAllPosts, getAllCategories } from '@/lib/mdx';
 
 export default async function sitemap() {
   const baseUrl = 'https://catallergyguide.com';
@@ -16,7 +16,8 @@ export default async function sitemap() {
   }));
 
   // Category routes
-  const categoryRoutes = Object.keys(CATEGORIES).map((categorySlug) => ({
+  const categories = getAllCategories();
+  const categoryRoutes = categories.map((categorySlug) => ({
     url: `${baseUrl}/${categorySlug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
@@ -26,7 +27,7 @@ export default async function sitemap() {
   // Blog post routes
   const posts = getAllPosts();
   const postRoutes = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: `${baseUrl}/${post.category}/${post.slug}`,
     lastModified: new Date(post.date || Date.now()),
     changeFrequency: 'monthly',
     priority: 0.7,
@@ -34,3 +35,4 @@ export default async function sitemap() {
 
   return [...staticRoutes, ...categoryRoutes, ...postRoutes];
 }
+
