@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PostCard from '@/components/PostCard';
@@ -159,8 +160,15 @@ export default async function BlogPostPage({ params }) {
           )}
 
           {/* Main MDX Content */}
-          <div className="prose prose-lg max-w-none text-charcoal/90 leading-relaxed space-y-6 prose-headings:font-serif prose-headings:text-charcoal prose-headings:font-bold prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-a:text-terracotta hover:prose-a:underline prose-strong:text-sage">
-            <MDXRemote source={post.content} />
+          <div className="prose prose-lg max-w-none text-charcoal/90 leading-relaxed space-y-6 prose-headings:font-serif prose-headings:text-charcoal prose-headings:font-bold prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-a:text-terracotta hover:prose-a:underline prose-strong:text-sage overflow-x-auto">
+            <MDXRemote
+              source={post.content}
+              options={{
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                },
+              }}
+            />
           </div>
 
         </article>
