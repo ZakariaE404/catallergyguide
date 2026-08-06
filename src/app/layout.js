@@ -18,6 +18,11 @@ export const metadata = {
     template: "%s | CatAllergyGuide",
   },
   description: "Expert guidance, trusted resources, and hypoallergenic cat breeds for allergy-sensitive homes.",
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: "CatAllergyGuide — Love Cats. Breathe Easy. Live Better.",
     description: "Expert guidance, trusted resources, and hypoallergenic cat breeds for allergy-sensitive homes.",

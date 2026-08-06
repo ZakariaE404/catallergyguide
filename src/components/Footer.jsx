@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -18,10 +19,14 @@ export default function Footer() {
           {/* Column 1: Brand Info & Socials */}
           <div className="md:col-span-5 space-y-4 pr-md-4">
             <Link href="/" className="flex items-center gap-3 group inline-flex">
-              <div className="w-10 h-10 rounded-full border-2 border-cream/80 flex items-center justify-center p-1.5 text-cream">
-                <svg className="w-full h-full stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14c-1.5 0-2.5-.8-3-1.5M12 14c1.5 0 2.5-.8 3-1.5M12 14v1.5m-3-7.5l-2-3.5L4 5.5l1.5 5C4.2 11.7 4 13.3 4 15c0 4.4 3.6 7 8 7s8-2.6 8-7c0-1.7-.2-3.3-1.5-4.5L20 5.5l-3 2-2-3.5" />
-                </svg>
+              <div className="h-10 w-auto transition-transform group-hover:scale-105">
+                <Image
+                  src="/logo.png"
+                  alt="CatAllergyGuide Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-auto object-contain brightness-0 invert"
+                />
               </div>
               <span className="font-serif text-2xl font-bold tracking-tight text-cream">
                 CatAllergyGuide

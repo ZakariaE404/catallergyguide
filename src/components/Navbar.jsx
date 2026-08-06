@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const dropdownData = {
   breeds: {
@@ -242,10 +243,15 @@ export default function Navbar() {
           
           {/* Logo & Tagline */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <div className="w-12 h-12 rounded-full border-2 border-sage flex items-center justify-center p-2 text-sage transition-transform group-hover:scale-105">
-              <svg className="w-full h-full stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 14c-1.5 0-2.5-.8-3-1.5M12 14c1.5 0 2.5-.8 3-1.5M12 14v1.5m-3-7.5l-2-3.5L4 5.5l1.5 5C4.2 11.7 4 13.3 4 15c0 4.4 3.6 7 8 7s8-2.6 8-7c0-1.7-.2-3.3-1.5-4.5L20 5.5l-3 2-2-3.5m-6 3.5h.01m5.99 0h.01" />
-              </svg>
+            <div className="h-12 w-auto transition-transform group-hover:scale-105">
+              <Image
+                src="/logo.png"
+                alt="CatAllergyGuide Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto object-contain"
+                priority
+              />
             </div>
             <div>
               <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-sage block leading-none">
