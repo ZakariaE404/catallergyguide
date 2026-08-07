@@ -111,12 +111,12 @@ export default function Footer() {
         {/* Bottom Bar Divider & Copyright */}
         <div className="border-t border-cream/20 pt-6 text-center text-xs text-cream/70 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div>
-            © 2024 CatAllergyGuide. All rights reserved.
+            © 2026 CatAllergyGuide. All rights reserved.
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="#" className="hover:underline hover:text-cream">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:underline hover:text-cream">Privacy Policy</Link>
             <span>•</span>
-            <Link href="#" className="hover:underline hover:text-cream">Disclaimer</Link>
+            <Link href="/disclaimer" className="hover:underline hover:text-cream">Disclaimer</Link>
           </div>
         </div>
 

@@ -44,7 +44,7 @@ export default function Hero() {
 
             <div className="pt-3">
               <Link
-                href="#"
+                href="/breeds/best-hypoallergenic-cat-breeds"
                 className="inline-block bg-terracotta hover:bg-terracotta/90 text-white font-semibold text-base px-8 py-3.5 rounded-full shadow-sm hover:shadow transition-all duration-200"
               >
                 Start Your Allergy Journey
