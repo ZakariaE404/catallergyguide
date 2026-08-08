@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PostCard from '@/components/PostCard';
+import FAQAccordion from '@/components/FAQAccordion';
 import { getAllPosts, getPostBySlug, getRelatedPosts, getCategoryInfo } from '@/lib/mdx';
 
 export async function generateStaticParams() {
@@ -96,6 +97,20 @@ export default async function BlogPostPage({ params }) {
     },
   };
 
+  // FAQPage JSON-LD Schema
+  const faqJsonLd = post.faqs && Array.isArray(post.faqs) && post.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  } : null;
+
   return (
     <div className="min-h-screen flex flex-col bg-cream text-charcoal">
       {/* Inject JSON-LD Article Schema */}
@@ -103,6 +118,13 @@ export default async function BlogPostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* Inject JSON-LD FAQPage Schema */}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <Navbar />
 
@@ -170,6 +192,13 @@ export default async function BlogPostPage({ params }) {
               }}
             />
           </div>
+
+          {/* FAQ Accordion Section */}
+          {post.faqs && post.faqs.length > 0 && (
+            <section className="mt-12 pt-8 border-t border-sage/20">
+              <FAQAccordion faqs={post.faqs} />
+            </section>
+          )}
 
         </article>
 
