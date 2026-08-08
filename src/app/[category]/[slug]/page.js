@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PostCard from '@/components/PostCard';
 import FAQAccordion from '@/components/FAQAccordion';
+import ReviewCallout from '@/components/ReviewCallout';
 import { getAllPosts, getPostBySlug, getRelatedPosts, getCategoryInfo } from '@/lib/mdx';
 
 export async function generateStaticParams() {
@@ -69,6 +70,10 @@ export default async function BlogPostPage({ params }) {
 
   const categoryInfo = getCategoryInfo(category);
   const relatedPosts = getRelatedPosts(category, slug, 3);
+
+  const mdxComponents = {
+    ReviewCallout: (props) => <ReviewCallout {...props} currentCategory={category} />,
+  };
 
   // Article JSON-LD Schema
   const jsonLd = {
@@ -185,6 +190,7 @@ export default async function BlogPostPage({ params }) {
           <div className="prose prose-lg max-w-none text-charcoal/90 leading-relaxed space-y-6 prose-headings:font-serif prose-headings:text-charcoal prose-headings:font-bold prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-a:text-terracotta hover:prose-a:underline prose-strong:text-sage overflow-x-auto">
             <MDXRemote
               source={post.content}
+              components={mdxComponents}
               options={{
                 mdxOptions: {
                   remarkPlugins: [remarkGfm],
