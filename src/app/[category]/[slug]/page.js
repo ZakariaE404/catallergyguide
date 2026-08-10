@@ -8,6 +8,9 @@ import Footer from '@/components/Footer';
 import PostCard from '@/components/PostCard';
 import FAQAccordion from '@/components/FAQAccordion';
 import ReviewCallout from '@/components/ReviewCallout';
+import ProductCard from '@/components/ProductCard';
+import ProductList from '@/components/ProductList';
+import AffiliateDisclosure from '@/components/AffiliateDisclosure';
 import { getAllPosts, getPostBySlug, getRelatedPosts, getCategoryInfo } from '@/lib/mdx';
 
 export async function generateStaticParams() {
@@ -73,6 +76,9 @@ export default async function BlogPostPage({ params }) {
 
   const mdxComponents = {
     ReviewCallout: (props) => <ReviewCallout {...props} currentCategory={category} />,
+    ProductCard,
+    ProductList,
+    AffiliateDisclosure,
   };
 
   // Article JSON-LD Schema
