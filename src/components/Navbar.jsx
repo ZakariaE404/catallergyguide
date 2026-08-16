@@ -9,8 +9,9 @@ const dropdownData = {
     label: 'Breeds',
     items: [
       { label: 'Best Hypoallergenic Cat Breeds', href: '/breeds/best-hypoallergenic-cat-breeds' },
-      { label: 'Siberian Cats', href: '/breeds/siberian-cats' },
-      { label: 'Balinese Cat Guide', href: '/breeds/balinese-cat-guide' },
+      { label: 'Siberian Cats & Allergies', href: '/breeds/siberian-cats-hypoallergenic' },
+      { label: 'Devon Rex vs. Sphynx', href: '/breeds/devon-rex-vs-sphynx-allergies' },
+      { label: 'Russian Blue Cats & Allergies', href: '/breeds/russian-blue-cat-allergies' },
     ],
     viewAll: { label: 'View All Breeds →', href: '/breeds' },
   },
