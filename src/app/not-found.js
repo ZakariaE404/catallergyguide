@@ -29,7 +29,7 @@ export default function NotFound() {
               Oops! Page Not Found
             </h1>
             <p className="text-charcoal/75 text-base leading-relaxed max-w-md mx-auto">
-              It seems this page has wandered off like a curious cat. Let's get you back to safety.
+              It seems this page has wandered off like a curious cat. Let&apos;s get you back to safety.
             </p>
           </div>
 

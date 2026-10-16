@@ -5,6 +5,10 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'Breed Matcher Tool (Coming Soon) — CatAllergyGuide',
   description: 'Find hypoallergenic cat breeds that match your lifestyle and allergy needs.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function BreedMatcherPlaceholder() {

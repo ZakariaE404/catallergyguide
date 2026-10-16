@@ -6,8 +6,8 @@ export default async function sitemap() {
   // Base routes
   const staticRoutes = [
     '',
+    '/tools',
     '/tools/allergy-quiz',
-    '/tools/breed-matcher',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

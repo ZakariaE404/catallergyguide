@@ -64,12 +64,9 @@ export default function ToolsSection() {
                 Find hypoallergenic breeds that match your lifestyle and allergy needs.
               </p>
               <div>
-                <Link
-                  href="/tools/breed-matcher"
-                  className="inline-block bg-terracotta hover:bg-terracotta/90 text-white text-sm font-semibold px-6 py-2 rounded-full shadow-xs transition-colors"
-                >
-                  Try It Now
-                </Link>
+                <span className="inline-block bg-charcoal/10 text-charcoal/50 text-sm font-semibold px-6 py-2 rounded-full cursor-not-allowed">
+                  Coming Soon
+                </span>
               </div>
             </div>
           </div>

@@ -1,0 +1,415 @@
+{
+  "questions": [
+    {
+      "id": "household_status",
+      "number": 1,
+      "title": "Household Status",
+      "question": "Do you currently live with a cat, or are you thinking of adopting?",
+      "subtitle": "This helps us tailor your recommendations for either current home management or pre-adoption preparation.",
+      "isScored": false,
+      "isRedFlagQuestion": false,
+      "options": [
+        {
+          "id": "living_with_cat",
+          "label": "I currently live with a cat",
+          "description": "Looking for daily home management, air filtration, and symptom reduction tips.",
+          "points": 0,
+          "isRedFlag": false,
+          "value": "living_with_cat"
+        },
+        {
+          "id": "thinking_of_adopting",
+          "label": "I am thinking of adopting a cat",
+          "description": "Evaluating sensitivity risks, low-allergen breeds, and pre-adoption steps.",
+          "points": 0,
+          "isRedFlag": false,
+          "value": "thinking_of_adopting"
+        }
+      ]
+    },
+    {
+      "id": "exposure_onset",
+      "number": 2,
+      "title": "Reaction Speed",
+      "question": "How quickly do your allergy symptoms typically begin around cats?",
+      "subtitle": "Immediate reactions indicate higher circulating IgE antibodies to airborne Fel d 1.",
+      "isScored": true,
+      "isRedFlagQuestion": false,
+      "options": [
+        {
+          "id": "onset_none",
+          "label": "I rarely or never notice immediate symptoms",
+          "description": "Even after prolonged contact or visiting homes with cats.",
+          "points": 0,
+          "isRedFlag": false
+        },
+        {
+          "id": "onset_slow",
+          "label": "After several hours or prolonged cuddling",
+          "description": "Symptoms only develop after heavy direct contact with a cat.",
+          "points": 1,
+          "isRedFlag": false
+        },
+        {
+          "id": "onset_moderate",
+          "label": "Within 30 to 60 minutes of entering a cat-occupied room",
+          "description": "Sneezing or eye itching begins as airborne dander circulates.",
+          "points": 2,
+          "isRedFlag": false
+        },
+        {
+          "id": "onset_fast",
+          "label": "Almost instantly upon entering a home with a cat",
+          "description": "Rapid reaction even before touching or seeing the feline.",
+          "points": 3,
+          "isRedFlag": false
+        }
+      ]
+    },
+    {
+      "id": "nasal_symptoms",
+      "number": 3,
+      "title": "Nasal & Sinus Reactions",
+      "question": "How severely do nasal and sinus symptoms affect you around cats?",
+      "subtitle": "Allergic rhinitis is the most common manifestation of feline protein exposure.",
+      "isScored": true,
+      "isRedFlagQuestion": false,
+      "options": [
+        {
+          "id": "nasal_none",
+          "label": "None or negligible",
+          "description": "No noticeable sneezing, congestion, or runny nose.",
+          "points": 0,
+          "isRedFlag": false
+        },
+        {
+          "id": "nasal_mild",
+          "label": "Mild sniffle or occasional sneeze",
+          "description": "Minor irritation that fades naturally and does not impede daily activities.",
+          "points": 1,
+          "isRedFlag": false
+        },
+        {
+          "id": "nasal_moderate",
+          "label": "Frequent sneezing, stuffed nose, or post-nasal drip",
+          "description": "Continuous nasal congestion that requires blowing your nose repeatedly.",
+          "points": 2,
+          "isRedFlag": false
+        },
+        {
+          "id": "nasal_severe",
+          "label": "Uncontrollable sneezing fits, complete nasal blockage, sinus headache",
+          "description": "Severe airway inflammation causing painful facial pressure and fatigue.",
+          "points": 3,
+          "isRedFlag": false
+        }
+      ]
+    },
+    {
+      "id": "ocular_symptoms",
+      "number": 4,
+      "title": "Eye Irritation",
+      "question": "What happens to your eyes when exposed to cat dander?",
+      "subtitle": "Microscopic dander particles readily dissolve upon contact with eye membranes.",
+      "isScored": true,
+      "isRedFlagQuestion": false,
+      "options": [
+        {
+          "id": "eye_none",
+          "label": "No eye irritation",
+          "description": "Eyes remain clear and comfortable.",
+          "points": 0,
+          "isRedFlag": false
+        },
+        {
+          "id": "eye_mild",
+          "label": "Occasional mild itchiness or slight watering",
+          "description": "Minor sensitivity that resolves after washing hands and face.",
+          "points": 1,
+          "isRedFlag": false
+        },
+        {
+          "id": "eye_moderate",
+          "label": "Persistent itching, redness, and watery eyes",
+          "description": "Intense urge to rub eyes, accompanied by stinging or clear discharge.",
+          "points": 2,
+          "isRedFlag": false
+        },
+        {
+          "id": "eye_severe",
+          "label": "Severe swelling of eyelids, bloodshot redness, and burning pain",
+          "description": "Significant conjunctival inflammation, puffiness, and photophobia.",
+          "points": 3,
+          "isRedFlag": false
+        }
+      ]
+    },
+    {
+      "id": "respiratory_symptoms",
+      "number": 5,
+      "title": "Respiratory & Airway Check",
+      "question": "Do you experience any coughing, chest tightness, or respiratory discomfort around cats?",
+      "subtitle": "Fel d 1 particles are less than 5 microns wide, allowing them to penetrate deep into pulmonary bronchioles.",
+      "isScored": true,
+      "isRedFlagQuestion": true,
+      "options": [
+        {
+          "id": "resp_none",
+          "label": "None — no coughing or breathing discomfort",
+          "description": "Your airways remain clear and unaffected.",
+          "points": 0,
+          "isRedFlag": false
+        },
+        {
+          "id": "resp_mild",
+          "label": "Occasional mild cough or slight throat tickle",
+          "description": "A minor dry throat tickle from airborne fur or dust, without breathing restriction.",
+          "points": 1,
+          "isRedFlag": false
+        },
+        {
+          "id": "resp_red_flag",
+          "label": "Wheezing, chest tightness, or trouble breathing",
+          "description": "A whistling breath sound, constriction in the chest, or shortness of breath.",
+          "points": 0,
+          "isRedFlag": true
+        }
+      ]
+    },
+    {
+      "id": "skin_symptoms",
+      "number": 6,
+      "title": "Skin & Contact Sensitivity",
+      "question": "How does your skin react to direct contact with cat fur, saliva, or licks?",
+      "subtitle": "Saliva contains the highest concentrations of Fel d 1, which transfers to skin upon contact.",
+      "isScored": true,
+      "isRedFlagQuestion": false,
+      "options": [
+        {
+          "id": "skin_none",
+          "label": "No skin reaction",
+          "description": "Petting, holding, or being licked causes zero marks or itching.",
+          "points": 0,
+          "isRedFlag": false
+        },
+        {
+          "id": "skin_mild",
+          "label": "Occasional minor itch where licked or scratched",
+          "description": "Faint local tingling that clears rapidly after washing with soap and water.",
+          "points": 1,
+          "isRedFlag": false
+        },
+        {
+          "id": "skin_moderate",
+          "label": "Noticeable redness, localized itchy welts, or blotches",
+          "description": "Histamine flare-ups appearing at the exact point of feline contact.",
+          "points": 2,
+          "isRedFlag": false
+        },
+        {
+          "id": "skin_severe",
+          "label": "Widespread hives (urticaria) or severe eczema flare-ups",
+          "description": "Raised, intensely itchy welts spreading across arms, neck, or face.",
+          "points": 3,
+          "isRedFlag": false
+        }
+      ]
+    },
+    {
+      "id": "medication_response",
+      "number": 7,
+      "title": "Treatment Responsiveness",
+      "question": "How do your symptoms respond to over-the-counter allergy relief?",
+      "subtitle": "How readily your histamine cascade responds to standard antihistamines or nasal sprays.",
+      "isScored": true,
+      "isRedFlagQuestion": false,
+      "options": [
+        {
+          "id": "med_none_needed",
+          "label": "My symptoms are so mild I have never needed medication",
+          "description": "Natural exposure causes minimal reaction without pharmaceutical intervention.",
+          "points": 0,
+          "isRedFlag": false
+        },
+        {
+          "id": "med_effective",
+          "label": "Standard OTC antihistamines provide fast, complete relief",
+          "description": "A non-drowsy tablet or nasal spray rapidly clears symptoms.",
+          "points": 1,
+          "isRedFlag": false
+        },
+        {
+          "id": "med_not_tried",
+          "label": "I haven't tried allergy medication yet",
+          "description": "You currently manage without medications and have not tested their efficacy.",
+          "points": 2,
+          "isRedFlag": false
+        },
+        {
+          "id": "med_partial",
+          "label": "Medication only partially takes the edge off",
+          "description": "Antihistamines help slightly, but persistent irritation remains in the background.",
+          "points": 2,
+          "isRedFlag": false
+        },
+        {
+          "id": "med_resistant",
+          "label": "Medications fail to relieve my symptoms",
+          "description": "Standard oral medications provide virtually no relief from heavy dander exposure.",
+          "points": 3,
+          "isRedFlag": false
+        }
+      ]
+    }
+  ],
+  "tierThresholds": {
+    "mild": { "min": 0, "max": 5 },
+    "moderate": { "min": 6, "max": 10 },
+    "high": { "min": 11, "max": 16 }
+  },
+  "tierContent": {
+    "mild": {
+      "key": "mild",
+      "name": "Mild Sensitivity",
+      "badge": "Mild Sensitivity Tier",
+      "color": "sage",
+      "tagline": "Your symptoms suggest mild sensitivity to cat allergens."
+    },
+    "moderate": {
+      "key": "moderate",
+      "name": "Moderate Sensitivity",
+      "badge": "Moderate Sensitivity Tier",
+      "color": "terracotta",
+      "tagline": "Your symptoms suggest moderate sensitivity to cat allergens."
+    },
+    "high": {
+      "key": "high",
+      "name": "High Sensitivity",
+      "badge": "High Sensitivity Tier",
+      "color": "amber",
+      "headline": "Consult an Allergist: Your symptoms suggest high sensitivity to cat allergens.",
+      "tagline": "Your symptoms suggest high sensitivity to feline allergens."
+    },
+    "red_flag": {
+      "key": "red_flag",
+      "name": "Respiratory Alert",
+      "badge": "Medical Consultation Required",
+      "color": "terracotta",
+      "headline": "Please Consult a Doctor or Board-Certified Allergist",
+      "tagline": "You reported lower respiratory symptoms that require professional medical evaluation."
+    }
+  },
+  "recommendations": {
+    "mild": {
+      "living_with_cat": {
+        "summary": "Your symptoms suggest mild sensitivity to cat allergens. Because you currently live with a cat, minor adjustments can keep you completely comfortable. Running a True HEPA air purifier in the bedroom, feeding an allergen-reducing diet to neutralize saliva Fel d 1, and regular HEPA vacuuming will dramatically reduce ambient dander levels.",
+        "breedSlugs": [
+          "siberian-cats-hypoallergenic",
+          "russian-blue-cat-allergies"
+        ],
+        "productSlugs": [
+          "best-cat-food-for-allergies",
+          "best-air-purifiers-for-cat-allergies",
+          "best-hepa-vacuum-for-pet-hair"
+        ],
+        "educationalSlugs": [
+          "what-causes-cat-allergies",
+          "how-long-do-cat-allergy-symptoms-last"
+        ]
+      },
+      "thinking_of_adopting": {
+        "summary": "Your symptoms suggest mild sensitivity to cat allergens. If you are preparing to adopt, choosing a naturally low-Fel d 1 cat breed and setting up basic air filtration before adoption will help ensure a symptom-free transition.",
+        "breedSlugs": [
+          "best-hypoallergenic-cat-breeds",
+          "siberian-cats-hypoallergenic",
+          "russian-blue-cat-allergies"
+        ],
+        "productSlugs": [
+          "best-air-purifiers-for-cat-allergies",
+          "best-cat-food-for-allergies"
+        ],
+        "educationalSlugs": [
+          "what-causes-cat-allergies",
+          "cat-allergy-symptoms"
+        ]
+      }
+    },
+    "moderate": {
+      "living_with_cat": {
+        "summary": "Your symptoms suggest moderate sensitivity to cat allergens. To live comfortably with your cat, a multi-layered allergen reduction strategy is key: feed Purina LiveClear to neutralize saliva allergens, install True HEPA air cleaners, and keep cats out of your bedroom sanctuary.",
+        "breedSlugs": [
+          "best-hypoallergenic-cat-breeds",
+          "siberian-cats-hypoallergenic"
+        ],
+        "productSlugs": [
+          "best-air-purifiers-for-cat-allergies",
+          "best-cat-food-for-allergies",
+          "best-allergy-medication-for-cat-owners"
+        ],
+        "educationalSlugs": [
+          "what-causes-cat-allergies",
+          "cat-allergy-symptoms"
+        ]
+      },
+      "thinking_of_adopting": {
+        "summary": "Your symptoms suggest moderate sensitivity to cat allergens. Before adopting, focus specifically on proven low-Fel d 1 breeds, schedule multiple in-person visits with breeders to test your personal reaction, and prepare your home with HEPA filtration.",
+        "breedSlugs": [
+          "siberian-cats-hypoallergenic",
+          "devon-rex-vs-sphynx-allergies",
+          "russian-blue-cat-allergies"
+        ],
+        "productSlugs": [
+          "best-air-purifiers-for-cat-allergies",
+          "best-cat-food-for-allergies",
+          "best-allergy-medication-for-cat-owners"
+        ],
+        "educationalSlugs": [
+          "cat-allergy-testing",
+          "what-causes-cat-allergies"
+        ]
+      }
+    },
+    "high": {
+      "living_with_cat": {
+        "summary": "Consult an allergist: Your symptoms suggest high sensitivity to cat allergens. Living with a cat while experiencing severe reactions requires intensive medical guidance. An allergist can evaluate you for prescription medications or allergen immunotherapy (allergy shots) alongside aggressive home filtration.",
+        "breedSlugs": [
+          "siberian-cats-hypoallergenic",
+          "best-hypoallergenic-cat-breeds"
+        ],
+        "productSlugs": [
+          "best-air-purifiers-for-cat-allergies",
+          "best-allergy-medication-for-cat-owners",
+          "best-hepa-vacuum-for-pet-hair"
+        ],
+        "educationalSlugs": [
+          "cat-allergy-testing",
+          "cat-allergy-symptoms"
+        ]
+      },
+      "thinking_of_adopting": {
+        "summary": "Consult an allergist: Your symptoms suggest high sensitivity to cat allergens. Before committing to adoption, we strongly advise scheduling clinical allergy testing and consulting an allergist. You should only consider lab-tested low-Fel d 1 cats (such as verified Siberians) and spend extended time with the specific cat beforehand.",
+        "breedSlugs": [
+          "siberian-cats-hypoallergenic",
+          "devon-rex-vs-sphynx-allergies",
+          "best-hypoallergenic-cat-breeds"
+        ],
+        "productSlugs": [
+          "best-air-purifiers-for-cat-allergies",
+          "best-allergy-medication-for-cat-owners"
+        ],
+        "educationalSlugs": [
+          "cat-allergy-testing",
+          "cat-allergy-symptoms"
+        ]
+      }
+    },
+    "red_flag": {
+      "summary": "You reported experiencing wheezing, chest tightness, coughing spells, or trouble breathing around cats. Lower respiratory symptoms can indicate feline-induced allergic asthma. Microscopic Fel d 1 proteins penetrate deep into lower bronchial airways, which can trigger dangerous bronchospasms. For your health and safety, please schedule an appointment with a physician or allergist for pulmonary evaluation. We do not provide product recommendations for respiratory conditions.",
+      "educationalSlugs": [
+        "cat-allergy-symptoms",
+        "cat-allergy-testing",
+        "what-causes-cat-allergies"
+      ]
+    }
+  }
+}

@@ -1,7 +1,17 @@
+'use client';
+
 import Image from 'next/image';
+import { trackGAEvent } from '@/lib/analytics';
 
 export default function ProductCard({ name, image, link, price }) {
   if (!name || !link) return null;
+
+  const handleAffiliateClick = () => {
+    trackGAEvent('affiliate_click', {
+      product_name: name,
+      outbound_url: link,
+    });
+  };
 
   return (
     <div className="not-prose h-full">
@@ -9,6 +19,7 @@ export default function ProductCard({ name, image, link, price }) {
         href={link}
         target="_blank"
         rel="nofollow sponsored noopener"
+        onClick={handleAffiliateClick}
         className="flex flex-col h-full bg-beige/70 hover:bg-beige border border-charcoal/10 hover:border-sage/40 rounded-2xl p-5 transition-all duration-300 shadow-xs hover:shadow-md group text-none no-underline"
       >
         {/* Product Image Container */}
