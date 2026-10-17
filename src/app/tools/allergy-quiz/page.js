@@ -29,7 +29,7 @@ export const metadata = {
 const QUIZ_FAQS = [
   {
     question: 'How does this allergy quiz calculate my sensitivity score?',
-    answer: 'The quiz evaluates your reactions across key physiological indicators: exposure onset speed, nasal congestion, ocular irritation, respiratory discomfort, skin contact sensitivity, and medication responsiveness. Points from scored questions are summed into three clinically informed tiers (Mild, Moderate, or High sensitivity). Any indication of wheezing or breathing difficulty immediately triggers a dedicated medical consultation alert.',
+    answer: 'The quiz evaluates your reactions across key physiological indicators: exposure onset speed, nasal congestion, ocular irritation, respiratory discomfort, skin contact sensitivity, and medication responsiveness. Points from scored questions are summed into three structured sensitivity tiers (Mild, Moderate, or High sensitivity) based on manufacturer specs and published ratings. Any indication of wheezing or breathing difficulty immediately triggers a dedicated medical consultation alert.',
   },
   {
     question: 'Why is wheezing or trouble breathing treated as a red-flag condition?',

@@ -42,7 +42,8 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.description,
       type: 'article',
-      publishedTime: post.date,
+      publishedTime: post.date ? new Date(post.date).toISOString() : undefined,
+      modifiedTime: post.dateModified ? new Date(post.dateModified).toISOString() : (post.date ? new Date(post.date).toISOString() : undefined),
       authors: [post.author || 'CatAllergyGuide Team'],
       url: `${siteUrl}/${post.category}/${post.slug}`,
       images: [
@@ -81,6 +82,13 @@ export default async function BlogPostPage({ params }) {
     AffiliateDisclosure,
   };
 
+  const formattedDatePublished = post.date
+    ? new Date(post.date).toISOString()
+    : undefined;
+  const formattedDateModified = post.dateModified
+    ? new Date(post.dateModified).toISOString()
+    : formattedDatePublished;
+
   // Article JSON-LD Schema
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -88,7 +96,8 @@ export default async function BlogPostPage({ params }) {
     headline: post.title,
     description: post.description,
     image: `https://catallergyguide.com${post.featuredImage || '/images/hero-cat.jpg'}`,
-    datePublished: post.date,
+    datePublished: formattedDatePublished,
+    dateModified: formattedDateModified,
     author: {
       '@type': 'Organization',
       name: post.author || 'CatAllergyGuide Team',

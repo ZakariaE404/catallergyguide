@@ -8,6 +8,9 @@ export default async function sitemap() {
     '',
     '/tools',
     '/tools/allergy-quiz',
+    '/tools/breed-matcher',
+    '/privacy-policy',
+    '/disclaimer',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

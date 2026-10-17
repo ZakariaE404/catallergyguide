@@ -158,10 +158,10 @@ export default function ToolsHubPage() {
           <div className="bg-cream border border-sage/20 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-2xs">
             <div className="space-y-2 max-w-2xl">
               <h3 className="text-lg font-serif font-bold text-charcoal">
-                Explore the Clinical Science Behind Cat Allergies
+                Explore the Science Behind Cat Allergies
               </h3>
               <p className="text-sm text-charcoal/80 leading-relaxed">
-                Before purchasing products or visiting catteries, learn how Fel d 1 proteins circulate through indoor environments and discover clinical strategies to minimize allergic reactions.
+                Before purchasing products or visiting catteries, learn how Fel d 1 proteins circulate through indoor environments and discover evidence-based strategies to minimize allergic reactions.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 flex-shrink-0">
