@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/validate-quiz-data.mjs",
+    "prebuild": "node scripts/validate-quiz-data.mjs && node scripts/validate-breed-data.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "node scripts/run-lint.mjs"
+    "lint": "node scripts/run-lint.mjs",
+    "test": "node scripts/test-breed-matcher.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

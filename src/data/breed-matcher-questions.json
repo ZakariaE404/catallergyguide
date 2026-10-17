@@ -1,0 +1,164 @@
+[
+  {
+    "id": "household",
+    "title": "Household Members",
+    "question": "Who shares your home environment?",
+    "subtitle": "Helps ensure the breed's natural temperament is a great match for your household dynamics.",
+    "options": [
+      {
+        "id": "adults_only",
+        "label": "Adults only (no kids or other pets)",
+        "desc": "Calm, quiet living environment with adult companions.",
+        "value": "adults_only"
+      },
+      {
+        "id": "with_children",
+        "label": "Household with children",
+        "desc": "Needs a gentle, patient, and child-tolerant breed.",
+        "value": "with_children"
+      },
+      {
+        "id": "with_other_pets",
+        "label": "Living with other pets (dogs, cats, etc.)",
+        "desc": "Requires a sociable breed adaptable to multi-pet dynamics.",
+        "value": "with_other_pets"
+      },
+      {
+        "id": "busy_family",
+        "label": "Active family with both kids and pets",
+        "desc": "Needs a highly resilient, confident, and social temperament.",
+        "value": "busy_family"
+      }
+    ]
+  },
+  {
+    "id": "home",
+    "title": "Living Space",
+    "question": "What type of home do you live in?",
+    "subtitle": "Some breeds thrive indoors in compact spaces, while others appreciate more vertical room.",
+    "options": [
+      {
+        "id": "apartment",
+        "label": "Apartment or condo",
+        "desc": "Compact indoor living; suited for cats comfortable in smaller footprints.",
+        "value": "apartment"
+      },
+      {
+        "id": "single_family",
+        "label": "Single-family home or townhouse",
+        "desc": "Spacious living environment with multiple rooms to explore.",
+        "value": "single_family"
+      }
+    ]
+  },
+  {
+    "id": "energy",
+    "title": "Activity Level",
+    "question": "What cat energy level best fits your daily routine?",
+    "subtitle": "From peaceful, serene lap cats to athletic acrobats seeking interactive playtime.",
+    "options": [
+      {
+        "id": "calm",
+        "label": "Calm & gentle lap companion",
+        "desc": "Prefers relaxed napping, gentle affection, and low-key companionship.",
+        "value": "calm"
+      },
+      {
+        "id": "moderate",
+        "label": "Balanced & adaptable",
+        "desc": "Enjoys short play sessions interspersed with peaceful lounging.",
+        "value": "moderate"
+      },
+      {
+        "id": "high",
+        "label": "High energy & playful explorer",
+        "desc": "Loves interactive toys, high perches, and energetic agility games.",
+        "value": "high"
+      }
+    ]
+  },
+  {
+    "id": "grooming",
+    "title": "Grooming & Coat Care",
+    "question": "How much grooming care can you commit to each week?",
+    "subtitle": "Coat maintenance directly impacts loose hair, surface dander, and bathing needs.",
+    "options": [
+      {
+        "id": "low",
+        "label": "Low maintenance (quick weekly brush)",
+        "desc": "Minimal coat upkeep with low shed or naturally short fur.",
+        "value": "low"
+      },
+      {
+        "id": "moderate",
+        "label": "Moderate care (1-2 weekly brushings)",
+        "desc": "Comfortable maintaining dense fur to trap and remove dander.",
+        "value": "moderate"
+      },
+      {
+        "id": "high",
+        "label": "Hands-on care (frequent brushing or skin baths)",
+        "desc": "Willing to do thorough triple-coat brushing or routine hairless skin care.",
+        "value": "high"
+      }
+    ]
+  },
+  {
+    "id": "budget",
+    "title": "Adoption & Care Budget",
+    "question": "What is your target budget tier for adoption and initial care?",
+    "subtitle": "Hypoallergenic purebreds from certified catteries vary in adoption fees and specialty care.",
+    "options": [
+      {
+        "id": "tier_2",
+        "label": "$$ — Moderate ($1,000 – $1,800)",
+        "desc": "Standard purebred adoption or established rescue programs.",
+        "value": "tier_2"
+      },
+      {
+        "id": "tier_3",
+        "label": "$$$ — Mid-to-High ($1,800 – $3,000)",
+        "desc": "Dedicated low-allergen lines or pedigree registered kittens.",
+        "value": "tier_3"
+      },
+      {
+        "id": "tier_4",
+        "label": "$$$$ — Specialty / Premium ($3,000+)",
+        "desc": "Rare lines, specialized health screening, or hairless pedigrees.",
+        "value": "tier_4"
+      },
+      {
+        "id": "flexible",
+        "label": "Flexible / Budget is not a primary constraint",
+        "desc": "Prioritize breed compatibility and allergen profile above upfront cost.",
+        "value": "flexible"
+      }
+    ]
+  },
+  {
+    "id": "vocal_alone",
+    "title": "Vocalization & Independence",
+    "question": "What is your preference for alone-time and vocalization?",
+    "subtitle": "Some cats are quiet and self-reliant; others thrive on conversational chirps and constant company.",
+    "options": [
+      {
+        "id": "quiet_independent",
+        "label": "Quiet & independent",
+        "desc": "Rarely meows, calm during work hours, peaceful demeanor.",
+        "value": "quiet_independent"
+      },
+      {
+        "id": "balanced",
+        "label": "Social & balanced",
+        "desc": "Greets you warmly at the door, content while you work.",
+        "value": "balanced"
+      },
+      {
+        "id": "vocal_social",
+        "label": "Very talkative & companion-seeking",
+        "desc": "Enjoys chatting, follows you from room to room, thrives on attention.",
+        "value": "vocal_social"
+      }
+    ]
+  }
+]

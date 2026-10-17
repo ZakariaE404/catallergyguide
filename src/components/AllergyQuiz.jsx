@@ -153,6 +153,12 @@ export default function AllergyQuiz() {
         setIsTransitioning(false);
         setSelectedOptionId(null);
 
+        try {
+          if (typeof window !== 'undefined' && window.sessionStorage) {
+            sessionStorage.setItem('allergy_quiz_tier', 'red_flag');
+          }
+        } catch (_) {}
+
         trackGAEvent('quiz_complete', {
           score: 0,
           tier: 'red_flag',
@@ -199,6 +205,12 @@ export default function AllergyQuiz() {
         setIsCompleted(true);
         setIsTransitioning(false);
         setSelectedOptionId(null);
+
+        try {
+          if (typeof window !== 'undefined' && window.sessionStorage) {
+            sessionStorage.setItem('allergy_quiz_tier', finalTier);
+          }
+        } catch (_) {}
 
         trackGAEvent('quiz_complete', {
           score: totalScore,

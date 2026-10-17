@@ -143,9 +143,12 @@ export default function ToolsHubPage() {
               </div>
 
               <div className="pt-6">
-                <span className="inline-block bg-charcoal/10 text-charcoal/50 text-sm font-semibold px-7 py-3 rounded-full cursor-not-allowed">
-                  Tool In Development
-                </span>
+                <Link
+                  href="/tools/breed-matcher"
+                  className="inline-block bg-charcoal/10 hover:bg-charcoal/20 text-charcoal/80 text-sm font-semibold px-7 py-3 rounded-full transition-colors"
+                >
+                  Coming Soon (Preview) →
+                </Link>
               </div>
             </div>
 
