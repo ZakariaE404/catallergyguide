@@ -116,9 +116,9 @@ export default function ToolsHubPage() {
             </div>
 
             {/* Tool 2: Breed Matcher Tool */}
-            <div className="bg-beige rounded-3xl p-7 sm:p-9 border border-charcoal/10 shadow-xs flex flex-col justify-between opacity-95">
+            <div className="bg-beige rounded-3xl p-7 sm:p-9 border border-charcoal/10 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
               <div className="space-y-5">
-                <div className="w-16 h-16 rounded-2xl bg-cream flex items-center justify-center text-sage/70 border border-sage/10 shadow-xs">
+                <div className="w-16 h-16 rounded-2xl bg-cream flex items-center justify-center text-sage border border-sage/20 shadow-xs">
                   <svg className="w-9 h-9 stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     <circle cx="10" cy="10" r="1.5" fill="currentColor" />
@@ -127,8 +127,8 @@ export default function ToolsHubPage() {
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <span className="inline-block bg-charcoal/10 text-charcoal/60 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
-                      Coming Soon
+                    <span className="inline-block bg-sage/15 text-sage text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                      Interactive Matcher
                     </span>
                   </div>
 
@@ -145,9 +145,9 @@ export default function ToolsHubPage() {
               <div className="pt-6">
                 <Link
                   href="/tools/breed-matcher"
-                  className="inline-block bg-charcoal/10 hover:bg-charcoal/20 text-charcoal/80 text-sm font-semibold px-7 py-3 rounded-full transition-colors"
+                  className="inline-block bg-terracotta hover:bg-terracotta/90 text-white font-semibold text-sm px-7 py-3 rounded-full transition-colors shadow-xs"
                 >
-                  Coming Soon (Preview) →
+                  Find Your Match →
                 </Link>
               </div>
             </div>

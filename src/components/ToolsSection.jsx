@@ -66,9 +66,9 @@ export default function ToolsSection() {
               <div>
                 <Link
                   href="/tools/breed-matcher"
-                  className="inline-block bg-charcoal/10 hover:bg-charcoal/20 text-charcoal/80 text-sm font-semibold px-6 py-2 rounded-full transition-colors"
+                  className="inline-block bg-terracotta hover:bg-terracotta/90 text-white text-sm font-semibold px-6 py-2 rounded-full shadow-xs transition-colors"
                 >
-                  Coming Soon →
+                  Try It Now
                 </Link>
               </div>
             </div>
